@@ -8,12 +8,12 @@ def log(txt):
 	print "===================================="
 
 
-def divisors():
+def divisors(number):
 
 	log("Divisors of a number")
 
-	number = int(input("Number:"))
-	divisor_candidate = number-1
+
+	divisor_candidate = number
 	divisors = []
 
 	while divisor_candidate > 0:
@@ -22,13 +22,13 @@ def divisors():
 		divisor_candidate -= 1
 
 
-
-	log(divisors)
+	divisors.sort()
+	return divisors
 
 
 
 
 if __name__ == '__main__':
-	divisors()
+	log(divisors(int(input("Number:"))))
 
 
