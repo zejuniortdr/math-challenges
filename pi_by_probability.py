@@ -1,22 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-###############################################################################
-# UTEIS
-###############################################################################
-LOG = False
-def log(message, to_file=False):
-	if to_file:
-		f = open('log.txt', 'a')
-		f.write(message)
-		f.close()
-
-	elif LOG:
-		print "================================================================================================"
-		print "%s" % message
-		print "================================================================================================"
-
-
 def pi_by_probability():
 	from random import randint
 	from fractions import gcd
@@ -29,9 +13,9 @@ def pi_by_probability():
 		tries = 500
 
 	try:
-		random_start = int(input("Random start (blank for 0): "))
+		random_start = int(input("Random start (blank for 1): "))
 	except:
-		random_start = 0
+		random_start = 1
 
 	try:
 		random_end = int(input("Random start (blank for 120): "))
