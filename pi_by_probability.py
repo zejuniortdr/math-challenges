@@ -47,10 +47,10 @@ def pi_by_probability():
 
 		if gcd(a, b) == 1:
 			coprimes += 1
-		else:
-			cofactors += 1
-
 		i += 1
+
+	cofactors = tries - coprimes
+
 	print("{0} cofactors, {1} coprimes, total: {2}".format(cofactors, coprimes, cofactors+coprimes))
 	x = Decimal(coprimes) / Decimal(tries)
 	print("X: {0}".format(x))
