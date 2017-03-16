@@ -18,7 +18,7 @@ def pi_by_probability():
 		random_start = 1
 
 	try:
-		random_end = int(input("Random start (blank for 120): "))
+		random_end = int(input("Random end (blank for 120): "))
 	except:
 		random_end = 120
 
