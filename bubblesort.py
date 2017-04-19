@@ -22,11 +22,25 @@ def bubble(a):
 		i += 1
 	if swaps == 0:
 		return a
+
+	log("Swaps: {0}".format(swaps))
 	return bubble(a)
 
 if __name__ == '__main__':
+	import random
+
 	log("Bubble Sort")
-	a = [1,4,5,6,2,3,8,9,0,7]
+	qtd = int(input("How many elements: "))
+	small = int(input("Smallest number: "))
+	big = int(input("Biggest number: "))
+
+	i = 0
+	a = []
+	while i < qtd:
+		a.append(random.randint(small, big))
+		i += 1
+
+	#a = [1,4,5,6,2,3,8,9,0,7]
 	log("Initial data: {0}".format(a))
 
 
