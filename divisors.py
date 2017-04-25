@@ -9,10 +9,6 @@ def log(txt):
 
 
 def divisors(number):
-
-	log("Divisors of a number")
-
-
 	divisor_candidate = number
 	divisors = []
 
@@ -29,6 +25,7 @@ def divisors(number):
 
 
 if __name__ == '__main__':
+	log("Divisors of a number")
 	log(divisors(int(input("Number:"))))
 
 
