@@ -8,7 +8,7 @@ def log(txt):
 	print "===================================="
 
 
-def prisonbreak(text):
+def prisonbreak_encode(text):
 	convert = {
 		0: ['+'],
 		1: [' '],
@@ -37,11 +37,40 @@ def prisonbreak(text):
 				pos += 1
 
 	dots = dots.strip()
+	log([number, dots])
 	return [number, dots]
 
+def prisonbreak_decode(text, dots):
+	convert = {
+		0: ['+'],
+		1: [' '],
+		2: ['A','B','C'],
+		3: ['D','E','F'],
+		4: ['G','H', 'I'],
+		5: ['J','K', 'L'],
+		6: ['M','N', 'O'],
+		7: ['P','Q', 'R', 'S'],
+		8: ['T','U', 'V'],
+		9: ['W','X', 'Y', 'Z'],
+	}
+
+	number = str(text)
+	dots_arr = dots.split(' ')
+	decoded_text = ''
+
+	log(dots_arr)
+
+	i = 0
+	for d in dots_arr:
+		letter = convert[int(number[i])][len(d)-1]
+		decoded_text += '{}'.format(letter)
+		i += 1
+
+
+	log(decoded_text)
+	return decoded_text
 
 if __name__ == '__main__':
 
-	ret = prisonbreak('PRISON BREAK')
-
-	log(ret)
+	ret = prisonbreak_encode('PRISON BREAK PQP')
+	prisonbreak_decode(ret[0], ret[1])
