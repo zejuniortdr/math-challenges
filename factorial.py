@@ -24,6 +24,9 @@ def factorial_loop(number):
 
 	return result
 
+def factorial_oneline(number):
+	return (lambda k: reduce(int.__mul__, range(1,k+1),1))(number)
+
 
 if __name__ == '__main__':
 	log("Factorial of number")
@@ -51,6 +54,12 @@ if __name__ == '__main__':
 			log("RECURSIVE: {0} in {1}".format(fr,t2-t1))
 		except:
 			log("RECURSIVE: maximum recursion depth exceeded")
+
+		# FACTORIAL ON LINE
+		t1 = datetime.now()
+		fr = factorial_oneline(number)
+		t2 = datetime.now()
+		log("ONE LINE: {0} in {1}".format(fr,t2-t1))
 
 	else:
 		log("factorial not defined for negative values")
