@@ -12,16 +12,12 @@ def is_perfect(number):
 
 	log("Perfect number")
 
-
-
 	divisors_list = divisors(number)
 	divisors_list.pop()
 
 	if sum(divisors_list) == number:
 		return {'is':True, 'divisors':divisors_list}
 	return {'is':False,}
-
-
 
 
 

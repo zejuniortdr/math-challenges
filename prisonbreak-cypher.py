@@ -71,6 +71,6 @@ def prisonbreak_decode(text, dots):
 	return decoded_text
 
 if __name__ == '__main__':
-
-	ret = prisonbreak_encode('PRISON BREAK PQP')
+	txt = raw_input("Text to encode: ")
+	ret = prisonbreak_encode(txt)
 	prisonbreak_decode(ret[0], ret[1])
