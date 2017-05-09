@@ -8,7 +8,7 @@ def log(txt):
 	print "===================================="
 
 
-def bubble(a):
+def bubble(a, total_swaps=0):
 	length = len(a)
 	i = 0
 	swaps = 0
@@ -23,8 +23,8 @@ def bubble(a):
 	if swaps == 0:
 		return a
 
-	log("Swaps: {0}".format(swaps))
-	return bubble(a)
+	log("Swaps: {0}".format(total_swaps+swaps))
+	return bubble(a, total_swaps+swaps)
 
 if __name__ == '__main__':
 	import random

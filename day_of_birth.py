@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
 	d = int(input("Type day of birth (1-31): "))
 	m = int(input("Type month of birth (1-12): "))
-	y = int(input("Type year of birth (aaaa): "))
+	y = int(input("Type year of birth (yyyy): "))
 
 	dow = dob(d,m,y)
 

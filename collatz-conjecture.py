@@ -9,7 +9,7 @@ def log(texto):
 def collatz():
 
 	n = int(input("Type an integer > 0: "))
-
+	n2 = n
 	# range_arr = range(20)
 	# for i in range_arr:
 	# n = i
@@ -25,7 +25,7 @@ def collatz():
 				n = 3*n +1
 			steps.append(n)
 
-		log("{0} \n ---  {1} Step(s) for N = {2}".format(steps, len(steps), n))
+		log("{0} \n ---  {1} Step(s) for N = {2}".format(steps, len(steps), n2))
 
 
 if __name__ == '__main__':
