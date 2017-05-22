@@ -27,7 +27,7 @@ def vacation():
 		{'day':date(ano,10,12), 'txt': 'Nossa Senhora Aparecida'},
 		{'day':date(ano,10,13), 'txt': 'Nossa Senhora Aparecida'},
 		{'day':date(ano,11,2), 'txt': 'Finados'},
-		{'day':date(ano,11,3), 'txt': 'Finados'},
+		# {'day':date(ano,11,3), 'txt': 'Finados'},
 		{'day':date(ano,11,15), 'txt': 'Proclamação da República'},
 		{'day':date(ano,12,25), 'txt': 'Natal'},
 	]
