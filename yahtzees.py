@@ -7,9 +7,12 @@ def log(texto):
 	print "######################################################"
 
 def yahtzees():
-	from random import randint
-	from math import pow
+	from datetime import datetime
 	from decimal import Decimal
+	from math import pow
+	from random import randint
+
+	inicio = datetime.now()
 
 	try:
 		y = int(input("How many yahtzees (default 1): "))
@@ -43,11 +46,11 @@ def yahtzees():
 			while j + 1 < len(dices):
 				if dices[j] != dices[j+1]:
 					yahtzee = False
-					print("#{}: {}".format(tries, dices))
+					print("#{}: {} [{}]".format(tries, dices, (datetime.now()-inicio)))
 					tries += 1
 					break
 				j += 1
-		log("Tries #{}: {}".format(tries, dices))
+		log("Tries #{}: {} [{}]".format(tries, dices, (datetime.now()-inicio)))
 		log("Probability: {}%".format( pow( Decimal(1)/Decimal(f), Decimal(n)-Decimal(1) ) * 100))
 		cont += 1
 
