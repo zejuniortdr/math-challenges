@@ -3,25 +3,13 @@
 
 
 def log(txt):
-	print "===================================="
-	print txt
-	print "===================================="
+	print("="*50)
+	print(txt)
+	print("="*50)
 
 
 def divisors(number):
-	divisor_candidate = number
-	divisors = []
-
-	while divisor_candidate > 0:
-		if number % divisor_candidate == 0:
-			divisors.append(divisor_candidate)
-		divisor_candidate -= 1
-
-
-	divisors.sort()
-	return divisors
-
-
+	return [n for n in range(1, number+1) if number % n == 0]
 
 
 if __name__ == '__main__':
